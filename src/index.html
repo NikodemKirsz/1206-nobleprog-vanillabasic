@@ -12,6 +12,12 @@
   <main>
     <h1>Vanilla JavaScript App</h1>
   </main>
+  <script>
+    (async function() {
+        const { text } = await( await fetch(`/api/HttpTrigger1`)).json();
+        document.querySelector('#name').textContent = text;
+    }());
+    </script>
 </body>
 
 </html>
